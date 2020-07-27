@@ -1,6 +1,9 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
 
+  # In the layout directory use blog.html.erb
+  layout "blog"
+
   # GET /blogs
   def index
     @blogs = Blog.all
