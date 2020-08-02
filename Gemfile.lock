@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/bolad/bolad_view_tool
+  revision: a78f36f1419f219becfeec6e85f4df988ecf45e5
+  specs:
+    bolad_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -219,6 +225,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bolad_view_tool!
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.5.0)
   byebug
