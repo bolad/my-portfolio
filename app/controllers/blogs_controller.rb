@@ -4,6 +4,9 @@ class BlogsController < ApplicationController
   # In the layout directory use blog.html.erb
   layout "blog"
 
+  #petergate's access control
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+
   # GET /blogs
   def index
     @blogs = Blog.all
