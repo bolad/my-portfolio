@@ -15,12 +15,12 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= login_helper %>
+    <%= login_helper('bn')%>
 
     <%= yield %>
 
     <%= render "shared/nav", location: 'bottom' %>
 
-    <%= source_helper %>
+    <%= source_helper('blog)') %>
   </body>
 </html>

@@ -126,7 +126,6 @@ body {
   color: rgba(255,255,255,.5);
 }
 
-
 /*
  * Affix and center
  */
@@ -160,3 +159,15 @@ body {
     width: 55rem;
   }
 }
+
+/*
+ * custom styles
+ */
+ .card-body {
+   color: black;
+   text-align: left;
+ }
+
+ .auth-links a {
+   color: black;
+ }
