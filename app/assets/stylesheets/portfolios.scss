@@ -10,7 +10,13 @@
   .jumbotron {
     padding-top: 6rem;
     padding-bottom: 6rem;
-  }
+    margin-bottom: 0;
+    background-color: #fff;
+  }  
+}
+
+.navbar {
+  margin-bottom: 0;
 }
 
 .jumbotron p:last-child {
