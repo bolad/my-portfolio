@@ -62,6 +62,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2)
+    acts_as_list (1.0.1)
+      activerecord (>= 4.2)
     autoprefixer-rails (9.8.6.1)
       execjs
     bcrypt (3.1.13)
@@ -96,10 +98,8 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
-    jquery-rails (4.4.0)
-      rails-dom-testing (>= 1, < 3)
-      railties (>= 4.2.0)
-      thor (>= 0.14, < 2.0)
+    jquery-ui-rails (6.0.1)
+      railties (>= 3.2.16)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.1.1)
@@ -241,6 +241,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_list (~> 1.0)
   bolad_view_tool!
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.5.0)
@@ -249,7 +250,7 @@ DEPENDENCIES
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
   friendly_id (~> 5.2.4)
   jbuilder (~> 2.7)
-  jquery-rails
+  jquery-ui-rails
   kaminari (~> 1.1.1)
   listen (>= 3.0.5, < 3.2)
   petergate (~> 2.0, >= 2.0.1)
