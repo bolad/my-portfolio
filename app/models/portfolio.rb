@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  acts_as_list
   include Placeholder
 
   validates_presence_of :title, :body, :main_image, :thumb_image
