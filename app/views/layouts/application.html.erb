@@ -19,6 +19,17 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
+
+        <%= video_tag(
+              'sunset.mp4',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              poster: 'sunset.png'
+            )
+            %>
+
           <%= render "shared/application_nav" %>
           <%= yield %>
           <%= render "shared/application_footer" %>
