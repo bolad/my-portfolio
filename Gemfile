@@ -59,5 +59,6 @@ gem 'image_processing', '~> 1.2'
 gem 'aws-sdk-s3', require: false
 gem 'active_storage_validations'
 gem 'mini_magick', '~> 4.8'
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 
 gem "meta_request", "~> 0.7.2"
