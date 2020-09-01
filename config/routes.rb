@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
   resources :portfolios, except: [:show] do
     put :sort, on: :collection
+    # member do
+    #   delete 'delete_photo/:photo_id', action: 'delete_photo', as: 'delete_photo'
+    # end
   end
 
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'

@@ -58,9 +58,17 @@ class PortfoliosController < ApplicationController
 		end
 	end
 
+	def delete_photo
+		photo = ActiveStorage::Attachment.find(params[:photo_id])
+		if current_user.site_admin?
+			photo.purge
+			redirect_back(fallback_location: request.referer)
+		end
+	end
+
 	private
 	def portfolio_params
-		params.require(:portfolio).permit(:title, :subtitle, :body,
+		params.require(:portfolio).permit(:title, :subtitle, :body, :photo,
 			technologies_attributes: [:name])
 	end
 
