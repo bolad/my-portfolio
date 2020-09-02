@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-7">
-      <%= image_tag @portfolio_item.main_image %>
+      <% if @portfolio_item.photo.attached? %>
+        <%= image_tag @portfolio_item.photo.variant(resize: '600x400!').processed %>
+        <% end %>
     </div>
 
     <div class="col-md-5">
