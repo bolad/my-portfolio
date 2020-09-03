@@ -1,8 +1,8 @@
-<div class="container">
+<div class="portfolio-container">
   <div class="row">
     <div class="col-md-7">
       <% if @portfolio_item.photo.attached? %>
-        <%= image_tag @portfolio_item.photo.variant(resize: '600x400!').processed %>
+        <%= image_tag @portfolio_item.photo.variant(resize: '600x400!').processed, width: '90%' %>
         <% end %>
     </div>
 
@@ -17,10 +17,17 @@
 
       <hr>
 
+
       <h3>Technologies Used:</h3>
 
       <% @portfolio_item.technologies.each do |t| %>
       <p><%= t.name %></p>
+      <% end %>
+
+      <% if logged_in?(:site_admin) %>
+        <div>
+          <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
+        </div>
       <% end %>
     </div>
   </div>

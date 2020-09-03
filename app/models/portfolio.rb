@@ -6,6 +6,7 @@ class Portfolio < ApplicationRecord
   validates_presence_of :title, :body
   has_many :technologies
   accepts_nested_attributes_for :technologies,
+                                allow_destroy: true,
                                 reject_if: lambda {|attr| attr['name'].blank?}
 
   def self.by_position
