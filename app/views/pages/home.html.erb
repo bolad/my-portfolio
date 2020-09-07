@@ -4,4 +4,5 @@
   <p class="lead">
     <%= link_to "About Me", about_me_path, class: "btn btn-lg btn-secondary" %>
   </p>
+  <%= js add_gritter(flash[:notice], :title => "Sample gritter app", :sticky => true, :time => 1000) %>
 </div>

@@ -11,8 +11,6 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag "/jquery-ui-1.12.1.custom/jquery-ui.min.css" %>
-   <script src="/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
   </head>
 
   <body>
@@ -33,6 +31,7 @@
           <%= render "shared/application_nav" %>
           <%= yield %>
           <%= render "shared/application_footer" %>
+          <%= alerts %>
           <%= source_helper("application") %>
         </div>
       </div>
