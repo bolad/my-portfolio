@@ -32,23 +32,21 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
 
-    respond_to do |format|
-      if @blog.save
-        format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
-      else
-        format.html { render :new }
-      end
+    if @blog.save
+      flash[:success] = 'Blog was successfully created.'
+      redirect_to @blog
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /blogs/1
   def update
-    respond_to do |format|
-      if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
+    if @blog.update(blog_params)
+      flash[:success] = 'Blog was successfully updated.'
+      redirect_to @blog
+    else
+      render :edit 
     end
   end
 
