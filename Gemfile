@@ -43,3 +43,4 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.14'
 gem "meta_request", "~> 0.7.2"
 gem 'gritter', '~> 1.2'
+gem 'twitter', '~> 6.2'
