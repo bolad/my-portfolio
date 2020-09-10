@@ -15,6 +15,9 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1
   def show
+    @blog = Blog.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
+
     @page_title = @blog.title
     @seo_keywords = @blog.body
   end
@@ -46,7 +49,7 @@ class BlogsController < ApplicationController
       flash[:success] = 'Blog was successfully updated.'
       redirect_to @blog
     else
-      render :edit 
+      render :edit
     end
   end
 
