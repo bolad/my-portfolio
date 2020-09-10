@@ -156,14 +156,14 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 55rem;
+    width: 65rem;
   }
 }
 
 /*
  * custom styles
  */
- .card-body {
+ .card-block {
    color: black;
    text-align: left;
  }
@@ -221,4 +221,19 @@ body {
 
 .app-footer {
   color: white;
+}
+
+
+.tech-news {
+  color: black;
+  margin: 20px;
+}
+
+.tech-news > .card {
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.tech-news a {
+  color: green;
 }
