@@ -13,6 +13,8 @@ require("channels")
 require("jquery-ui-dist/jquery-ui");
 require("html.sortable")
 
+global.$ = jQuery;
+
 var ready, set_positions;
 
 ready = void 0;
@@ -67,3 +69,6 @@ $(document).ready(ready);
 // const imagePath = (name) => images(name, true)
 
 import "controllers"
+
+require("trix")
+require("@rails/actiontext")

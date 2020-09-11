@@ -15,6 +15,8 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1
   def show
+    views = @blog.views + 1
+    @blog.update(views: views)
     @page_title = @blog.title
     @seo_keywords = @blog.body
   end
@@ -46,7 +48,7 @@ class BlogsController < ApplicationController
       flash[:success] = 'Blog was successfully updated.'
       redirect_to @blog
     else
-      render :edit 
+      render :edit
     end
   end
 
