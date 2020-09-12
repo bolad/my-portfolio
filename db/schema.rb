@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2020_09_10_211612) do
     t.string "slug"
     t.integer "status", default: 0
     t.bigint "topic_id"
-    t.integer "views"
+    t.integer "views", default: 0
     t.index ["slug"], name: "index_blogs_on_slug", unique: true
     t.index ["topic_id"], name: "index_blogs_on_topic_id"
   end

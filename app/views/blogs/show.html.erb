@@ -4,8 +4,12 @@
 
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
 
-  <p>
-    <%= @blog.body %>
-  </p>
+  <p class="lead">
+        <%= @blog.updated_at.strftime("%A, %B %e, %Y") %> | <%= pluralize(@blog.views, "View") %>
+      </p>
+      <hr class="my-4" />
+      <div class="post_body">
+        <%= @blog.body %>
+      </div>
 
 </div>
