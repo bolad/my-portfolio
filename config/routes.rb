@@ -7,6 +7,12 @@ Rails.application.routes.draw do
     # end
   end
 
+  resources :comments do
+    resources :comments
+  end
+
+get 'history', to: 'comments#history'
+
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
   get 'about-me', to: 'pages#about'
@@ -17,6 +23,7 @@ Rails.application.routes.draw do
     member do
       get :toggle_status
     end
+    resources :comments
   end
 
   root to: 'pages#home'
