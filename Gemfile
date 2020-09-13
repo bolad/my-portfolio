@@ -45,3 +45,4 @@ gem "meta_request", "~> 0.7.2"
 gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.2'
 gem 'redis', '~> 3.3', '>= 3.3.1'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
