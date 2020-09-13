@@ -17,6 +17,7 @@ class BlogsController < ApplicationController
   def show
     views = @blog.views + 1
     @blog.update(views: views)
+    @comments = @blog.comments.order("created_at DESC")
     @page_title = @blog.title
     @seo_keywords = @blog.body
   end
