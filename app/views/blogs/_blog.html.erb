@@ -16,7 +16,16 @@
   <p class="blog-text">
     <small class="text-muted">
       <%= blog.updated_at.strftime("%A, %B, %e, %Y") %> |
-      <%= pluralize(blog.views, "View") %> | 0 comments 
+      <%= pluralize(blog.views, "View") %> |
+      <% @num_comments = blog.comments.count %>
+      <% blog.comments.each do |comment| %>
+        <% @num_comments += comment.comments.count %>
+      <% end %>
+
+     <%= pluralize(@num_comments, "Comment") %> |
+     <% if logged_in?(:site_admin) %>
+       <%= link_to "Delete", blog, method: :delete %>
+     <% end %>
     </small>
   </p>
 </div>

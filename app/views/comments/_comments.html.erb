@@ -18,7 +18,7 @@
           </div>
         </div>
 
-        <% if current_user && (current_user == comment.user || current_user.site_admin?)%>
+        <% if current_user && (current_user == comment.user || logged_in?(:site_admin))%>
         <div class="col-4 text-right" style="padding-right: 0;">
           <div class="button-group" role="group" aria-label="Edit and Delete Button Group">
             <%= link_to "Edit", edit_comment_path(comment), class: 'btn btn-warning', remote: true %>

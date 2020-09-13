@@ -4,7 +4,8 @@
           <%= form_with model: [commentable, local] do |f| %>
           <div class="form-group">
               <%= f.rich_text_area :body, placeholder: "write a comment...", class:"reply-form-#{commentable.id}", id: f.object.object_id, method: :patch %>
-              <%= f.submit "Blog", class:'btn btn-dark float-right' %>
+              <br/>
+              <%= f.submit "Post Comment", class:'btn btn-dark float-right' %>
           </div>
           <% end %>
       </div>

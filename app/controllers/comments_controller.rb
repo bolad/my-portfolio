@@ -28,21 +28,20 @@ class CommentsController < ApplicationController
   end
 
   def history
-    
+
   end
 
-  private
+ private
 
  def comment_params
    params.require(:comment).permit(:body)
  end
 
  def set_commentable
-   # Comment
    if params[:comment_id]
      @commentable = Comment.find_by_id(params[:comment_id])
-   elsif params[:post_id]
-     @commentable = Blog.friendly.find(params[:post_id])
+   elsif params[:blog_id]
+     @commentable = Blog.friendly.find(params[:blog_id])
    end
  end
 

@@ -18,6 +18,11 @@ class BlogsController < ApplicationController
     views = @blog.views + 1
     @blog.update(views: views)
     @comments = @blog.comments.order("created_at DESC")
+
+    @num_comments = @blog.comments.count
+    @blog.comments.each do |comment|
+    @num_comments += comment.comments.count
+    
     @page_title = @blog.title
     @seo_keywords = @blog.body
   end

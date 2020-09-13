@@ -59,11 +59,11 @@ ActiveRecord::Schema.define(version: 2020_09_13_092015) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.text "edit_history"
+    t.text "edit_history", default: ""
     t.integer "commentable_id"
     t.string "commentable_type"
     t.bigint "user_id", null: false
-    t.boolean "reply"
+    t.boolean "reply", default: false
     t.integer "comment_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
