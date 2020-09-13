@@ -5,6 +5,8 @@ class Blog < ApplicationRecord
 
 		has_rich_text :body
 
+		has_many :comments, as: :commentable, dependent: :destroy
+
 		validates_presence_of :title, :body
 
 	#	belongs_to :topic
