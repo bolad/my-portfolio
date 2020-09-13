@@ -9,7 +9,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    @blogs = Blog.all.order("created_at DESC").page(params[:page]).per(5)
     @page_title = "My Portfolio Blog"
   end
 

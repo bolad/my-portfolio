@@ -4,6 +4,14 @@ GIT
   specs:
     bolad_view_tool (0.1.0)
 
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 35ea4f84de02382ed21cf03e5baf2f09222461eb
+  branch: master
+  specs:
+    faker (2.13.0)
+      i18n (>= 1.6, < 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -322,6 +330,7 @@ DEPENDENCIES
   cocoon (~> 1.2, >= 1.2.14)
   devise (~> 4.7, >= 4.7.2)
   dotenv-rails (~> 2.1, >= 2.1.1)
+  faker!
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
   friendly_id (~> 5.2.4)
   gritter (~> 1.2)

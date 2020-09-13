@@ -1,15 +1,15 @@
 <div class="col-sm-8 blog-main">
 
-  <h2><%= @blog.title %></h2>
+  <h3><%= @blog.title %></h3>
 
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
 
   <p class="lead">
-        <%= @blog.updated_at.strftime("%A, %B %e, %Y") %> | <%= pluralize(@blog.views, "View") %>
-      </p>
-      <hr class="my-4" />
-      <div class="post_body">
-        <%= @blog.body %>
-      </div>
+    <%= @blog.updated_at.strftime("%A, %B %e, %Y") %> | <%= pluralize(@blog.views, "View") %>
+  </p>
+  <hr class="my-4" />
+  <div class="blog_body">
+    <%= @blog.body %>
+  </div>
 
 </div>

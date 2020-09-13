@@ -6,11 +6,17 @@
     <p class="blog-post-meta">
     <%= link_to blog.status, toggle_status_blog_path(blog) %> |
     <%= link_to 'Edit', edit_blog_path(blog) %> |
-    <%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
+    <%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
     </p>
   <% end %>
 
-  <p>
-    <%= blog.body %>
+  <p class="blog-text">
+    <%= blog.body.to_plain_text.truncate_words(50) %>
+  </p>
+  <p class="blog-text">
+    <small class="text-muted">
+      <%= blog.updated_at.strftime("%A, %B, %e, %Y") %> |
+      <%= pluralize(blog.views, "View") %> | 0 comments 
+    </small>
   </p>
 </div>
