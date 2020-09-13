@@ -12,6 +12,7 @@
 
   <p class="blog-text">
     <%= blog.body.to_plain_text.truncate_words(50) %>
+    <%= link_to "continue reading", blog_path(blog) %>
   </p>
   <p class="blog-text">
     <small class="text-muted">

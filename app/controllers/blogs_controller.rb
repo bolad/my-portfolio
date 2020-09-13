@@ -21,8 +21,8 @@ class BlogsController < ApplicationController
 
     @num_comments = @blog.comments.count
     @blog.comments.each do |comment|
-    @num_comments += comment.comments.count
-    
+      @num_comments += comment.comments.count
+    end
     @page_title = @blog.title
     @seo_keywords = @blog.body
   end
