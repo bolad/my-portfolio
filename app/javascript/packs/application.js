@@ -10,8 +10,13 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("jquery-ui-dist/jquery-ui");
+require("jquery-ui-dist/jquery-ui")
 require("html.sortable")
+require("jquery")
+
+$(document).on('turbolinks:load', function() {
+  console.log("hey stan")
+})
 
 var ready, set_positions;
 
