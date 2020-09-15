@@ -4,8 +4,8 @@ jQuery(document).on('turbolinks:load', function() {
   var comments;
   comments = $('#comments');
   if (comments.length > 0) {
-    //App.global_chat = App.cable.subscriptions.create({
-    App.global_chat = consumer.subscriptions.create({
+    App.global_chat = App.cable.subscriptions.create({
+    //App.global_chat = consumer.subscriptions.create({
       channel: "BlogsChannel",
       blog_id: comments.data('blog-id')
     }, {
