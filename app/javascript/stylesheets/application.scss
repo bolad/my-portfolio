@@ -1,7 +1,7 @@
-@import "actiontext.scss";
+@import "./actiontext.scss";
 
 @import "bootstrap";
-@import "gritter";
+
 
 /*
  * Globals
@@ -217,7 +217,7 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('nz.png') no-repeat;
+  // background: image-url('nz.png') no-repeat;
   background-size: cover;
 }
 
@@ -266,3 +266,5 @@ body {
     }
   }
 }
+
+
