@@ -7,7 +7,7 @@ class Blog < ApplicationRecord
 
 		has_many :comments, as: :commentable, dependent: :destroy
 
-		validates_presence_of :title, :body
+		validates_presence_of :title, :body, :topic_id
 
-	  #belongs_to :topic
+	  belongs_to :topic
 end
