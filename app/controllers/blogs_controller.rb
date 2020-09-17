@@ -19,6 +19,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1
   def show
+    if logged_in?(:site_admin) || @blog.published?
     views = @blog.views + 1
     @blog.update(views: views)
     @comments = @blog.comments.order("created_at DESC")
@@ -29,6 +30,9 @@ class BlogsController < ApplicationController
     end
     @page_title = @blog.title
     @seo_keywords = @blog.body
+  else
+    redirect_to blogs_path, notice: "You are not authorised to access this page"
+  end
   end
 
   # GET /blogs/new
