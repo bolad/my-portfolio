@@ -35,7 +35,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'kaminari', '~> 1.1.1'
 
 gem "acts_as_list", "~> 1.0"
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 gem 'aws-sdk-s3', require: false
 gem 'active_storage_validations'
 gem 'mini_magick', '~> 4.8'
